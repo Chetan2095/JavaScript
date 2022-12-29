@@ -72,10 +72,35 @@
     <p>(ecternalJS() function is stored in "myScript.js")</p>
     <script src="myScript.js"></script>
     <br>
-    
-
-
-
+    <br>
+    <h1 id="underline">JavaScript output</h1>
+    <br>
+    <h2>Using innerHTML</h2>
+    <h3 id="demo6">To access an HTML element, JavaScript can use the document.getElementById(id) method. The id
+        attribute defines the HTML element. The innerHTML property defines the HTML content:</h3>
+    <button onclick="document.getElementById('demo6').innerHTML='Hello JavaScript!'">Click me!</button>
+    <br>
+     <h2>Using document.write()</h2>
+    <p>Never call document.write after the document has finished loading.
+        It will overwrite the whole document.</p>
+    <script>
+        document.write("five+six= ", 5 + 6)
+    </script>
+    <br>
+    <!-- <button type="button" onclick="document.write(5 + 6)">Try it</button> -->
+    <br>
+    <h3>Using window.alert()</h3>
+    <!-- <script>
+        window.alert("You can use an alert box to display data");
+    </script> -->
+    <!-- <script>
+        alert("You can use an alert box to display data");
+    </script> -->
+    <br>
+    <h2>JavaScript Print : using window.print()</h2>
+    <h3>Click the button to print the current screen</h3>
+    <!-- <button onclick="window.print()">Print this page</button> -->
+    <button onclick="print()">Print this page</button>
 </body>
 
 </html>

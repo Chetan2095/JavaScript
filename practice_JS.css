@@ -1,6 +1,9 @@
-#demo{
+#demo1{
     color: red;
 }
 #display{
     color: red;
+}
+#underline{
+    text-decoration: underline;
 }
