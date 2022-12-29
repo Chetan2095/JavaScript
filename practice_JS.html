@@ -101,6 +101,31 @@
     <h3>Click the button to print the current screen</h3>
     <!-- <button onclick="window.print()">Print this page</button> -->
     <button onclick="print()">Print this page</button>
+    <br>
+    <h1>JavaScript Statements</h1>
+    <h3 id="statement"></h3>
+    <script>
+        let x,y,z;
+        x = 5;
+        y = 7;
+        z = x + y;
+        document.getElementById('statement').innerHTML="The value of Z = " + z + "."
+    </script>
+    <h2>JavaScript Code blocks</h2>
+    <p id="block1"></p>
+    <p id="block2"></p>
+    <button onclick="codeBlock()">Click me!</button>
+    <script>
+        function codeBlock(){
+            document.getElementById('block1').innerHTML="Hello Dolly";
+            document.getElementById('block2').innerHTML="Happy Holi";
+        }
+    </script>
+    <br>
+    <br>
+    <br>
+    
+
 </body>
 
 </html>
