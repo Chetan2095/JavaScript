@@ -7,15 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practice JavaScript</title>
     <link rel="stylesheet" href="practice_JS.css">
+    <script>
+        function myFunction() {
+            document.getElementById('demo4').innerHTML = "Content of Paragraph is changed";
+        }
+    </script>
 </head>
 
 <body>
     <h1>What can JavaScript do?</h1>
     <h2>JavaScript Can Change HTML Content</h2>
-    <h3 id="demo">JavaScript can chnage the content of HTML element.</h3>
-    <p>"finds" an HTML element (with id="demo") using getElementById('') function and changes the element content
+    <h3 id="demo1">JavaScript can chnage the content of HTML element.</h3>
+    <p>"finds" an HTML element (with id="demo1") using getElementById('') function and changes the element content
         (innerHTML) to "Hello JavaScript":</p>
-    <button onclick="document.getElementById('demo').innerHTML='Hello JavaScript!'">Click me!</button>
+    <button onclick="document.getElementById('demo1').innerHTML='Hello JavaScript!'">Click me!</button>
     <br>
     <br>
     <h2>JavaScript Can Change HTML Attribute Values</h2>
@@ -30,7 +35,8 @@
     <br>
     <br>
     <h2>JavaScript Can Change HTML Styles (CSS)</h2>
-    <p id="changeSize">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo eveniet quaerat, molestiae quia blanditiis numquam
+    <p id="changeSize">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo eveniet quaerat, molestiae quia
+        blanditiis numquam
         delectus repellendus eos ullam eligendi eaque sed ab debitis non minima cumque alias excepturi? Asperiores.</p>
     <button onclick="document.getElementById('changeSize').style.fontSize='30px'">Click me!</button>
     <br>
@@ -40,6 +46,33 @@
     <button onclick="document.getElementById('display').style.display='none'">Click Me!</button>
     <br>
     <br>
+    <h2>JavaScript in 'script' tag in Body </h2>
+    <p id="demo2"></p>
+    <script>
+        document.getElementById('demo2').innerHTML = "My First JavaScript";
+    </script>
+    <br>
+    <p id="demo3">Lorem ipsum dolor sit amet.</p>
+    <button onclick="JSinBody()">Try it!</button>
+    <script>
+        function JSinBody() {
+            document.getElementById('demo3').innerHTML = "Content of Paragraph is changed";
+        }
+    </script>
+    <br>
+    <h2>JavaScript in 'script' tag in Head</h2>
+    <p id="demo4">Lorem ipsum dolor sit amet.</p>
+    <button type="button" onclick="myFunction()">Click me!</button>
+    <br>
+    <br>
+    <h1>External JavaScript</h1>
+    <p id="demo5">Lorem ipsum dolor sit amet, consectetur.</p>
+    <button onclick="externalJS()">Try it</button>
+    <p>This example links to "myScript.js".</p>
+    <p>(ecternalJS() function is stored in "myScript.js")</p>
+    <script src="myScript.js"></script>
+    <br>
+    
 
 
 
