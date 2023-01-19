@@ -69,7 +69,7 @@
         }
     </script>
     <br>
-    
+
     <h2>JavaScript in 'script' tag in Head</h2>
     <p id="demo4">Lorem ipsum dolor sit amet.</p>
     <button type="button" onclick="myFunction()">Click me!</button>
@@ -95,10 +95,10 @@
     <button onclick="document.getElementById('demo6').innerHTML='Hello JavaScript!'">Click me!</button>
     <br>
 
-     <h2>Using document.write()</h2>
+    <h2>Using document.write()</h2>
     <p>Never call document.write after the document has finished loading.
         It will overwrite the whole document. This method should be used only for testing purpose.</p>
-        <br>
+    <br>
     <script>
         document.write("five+six= ", 5 + 6)
     </script>
@@ -123,26 +123,85 @@
     <h1>JavaScript Statements</h1>
     <h3 id="statement"></h3>
     <script>
-        let x,y,z;
+        let x, y, z;
         x = 5;
         y = 7;
         z = x + y;
-        document.getElementById('statement').innerHTML="The value of Z = " + z + "."
+        document.getElementById('statement').innerHTML = "The value of Z = " + z + "."
     </script>
     <h2>JavaScript Code blocks</h2>
     <p id="block1"></p>
     <p id="block2"></p>
     <button onclick="codeBlock()">Click me!</button>
     <script>
-        function codeBlock(){
-            document.getElementById('block1').innerHTML="Hello Dolly";
-            document.getElementById('block2').innerHTML="Happy Holi";
+        function codeBlock() {
+            document.getElementById('block1').innerHTML = "Hello Dolly";
+            document.getElementById('block2').innerHTML = "Happy Holi";
         }
     </script>
     <br>
     <br>
+    <h2>JavaScript <strong>Data Type</strong></h2>
+    <p id="variable"></p>
+    <script>
+        let Name = "Chetan Anchara"
+        let degree = "B.Tech"
+        let stream = "CSE"
+        const passingYear = 2018
+        document.getElementById("variable").innerHTML = Name + "<br>" + degree + stream + "<br>" + passingYear;
+        document.getElementById("variable").style.fontSize = "25px"
+    </script>
     <br>
-    
+
+    <h2>Value = undefined</h2>
+    <p>A variable without a value has the value of: undefined</p>
+    <p id="undefined"></p>
+    <script>
+        let carName;
+        document.getElementById("undefined").innerHTML = carName;
+    </script>
+    <br>
+    <br>
+
+    <h2>Redeclaring Variables</h2>
+    <h3>Block Scope: Variables declared inside a { } block using 'let' and 'const' cannot be accessed from outside the
+        block.</h3>
+    <h3>Variables declared inside a { } block using 'var' can be accessed from outside the block.</h3>
+
+    <h2>Redeclaring a Variable Using var</h2>
+    <p>Redeclaring a variable inside a block will also redeclare the variable outside the block</p>
+    <p id="varRedeclare"></p>
+    <script>
+        var p = 10;
+        // Here p is 10
+
+        {
+            var p = 2;
+            // Here p is 2
+        }
+
+        // Here p is 2
+        document.getElementById("varRedeclare").innerHTML = p;
+    </script>
+
+    <h2>Redeclaring a Variable Using let</h2>
+    <p>Redeclaring a variable inside a block will not redeclare the variable outside the block</p>
+    <p id="letRedeclare"></p>
+
+    <script>
+        let q = 10;
+        // Here q is 10
+
+        {
+            let q = 2;
+            // Here q is 2
+        }
+
+        // Here q is 10
+        document.getElementById("letRedeclare").innerHTML = q;
+    </script>
+    <br>
+    <br>
 
 </body>
 
