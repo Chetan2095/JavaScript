@@ -18,11 +18,13 @@
     <h1>What can JavaScript do?</h1>
     <h2>JavaScript Can Change HTML Content</h2>
     <h3 id="demo1">JavaScript can chnage the content of HTML element.</h3>
-    <p>"finds" an HTML element (with id="demo1") using getElementById('') function and changes the element content
+    <p>"finds" an HTML element (with id="demo1") use getElementById(' ') function and changes the element content
         (innerHTML) to "Hello JavaScript":</p>
     <button onclick="document.getElementById('demo1').innerHTML='Hello JavaScript!'">Click me!</button>
     <br>
     <br>
+
+
     <h2>JavaScript Can Change HTML Attribute Values</h2>
     <p>In this case JavaScript changes the value of the src="image_link" attribute of an image.</p>
     <button onclick="document.getElementById('bulbON').src='pic_bulboff.gif'">Turn Off the light</button>
@@ -34,6 +36,8 @@
     <button onclick="document.getElementById('bulbOFF').src='pic_bulbon.gif'">Torn ON the light</button>
     <br>
     <br>
+
+
     <h2>JavaScript Can Change HTML Styles (CSS)</h2>
     <p id="changeSize">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo eveniet quaerat, molestiae quia
         blanditiis numquam
@@ -41,17 +45,22 @@
     <button onclick="document.getElementById('changeSize').style.fontSize='30px'">Click me!</button>
     <br>
     <br>
+
+
     <h2>JavaScript Can Hide HTML Elements</h2>
     <h3 id="display">Hello JavaScript!</h3>
     <button onclick="document.getElementById('display').style.display='none'">Click Me!</button>
     <br>
     <br>
+
+
     <h2>JavaScript in 'script' tag in Body </h2>
     <p id="demo2"></p>
     <script>
         document.getElementById('demo2').innerHTML = "My First JavaScript";
     </script>
     <br>
+
     <p id="demo3">Lorem ipsum dolor sit amet.</p>
     <button onclick="JSinBody()">Try it!</button>
     <script>
@@ -60,19 +69,24 @@
         }
     </script>
     <br>
+    
     <h2>JavaScript in 'script' tag in Head</h2>
     <p id="demo4">Lorem ipsum dolor sit amet.</p>
     <button type="button" onclick="myFunction()">Click me!</button>
     <br>
     <br>
+
     <h1>External JavaScript</h1>
     <p id="demo5">Lorem ipsum dolor sit amet, consectetur.</p>
     <button onclick="externalJS()">Try it</button>
     <p>This example links to "myScript.js".</p>
     <p>(ecternalJS() function is stored in "myScript.js")</p>
-    <script src="myScript.js"></script>
+    <script src="myScript.js">
+    </script>
     <br>
     <br>
+    <br>
+
     <h1 id="underline">JavaScript output</h1>
     <br>
     <h2>Using innerHTML</h2>
@@ -80,16 +94,18 @@
         attribute defines the HTML element. The innerHTML property defines the HTML content:</h3>
     <button onclick="document.getElementById('demo6').innerHTML='Hello JavaScript!'">Click me!</button>
     <br>
+
      <h2>Using document.write()</h2>
     <p>Never call document.write after the document has finished loading.
-        It will overwrite the whole document.</p>
+        It will overwrite the whole document. This method should be used only for testing purpose.</p>
+        <br>
     <script>
         document.write("five+six= ", 5 + 6)
     </script>
     <br>
     <!-- <button type="button" onclick="document.write(5 + 6)">Try it</button> -->
     <br>
-    <h3>Using window.alert()</h3>
+    <h2>Using window.alert()</h2>
     <!-- <script>
         window.alert("You can use an alert box to display data");
     </script> -->
@@ -97,11 +113,13 @@
         alert("You can use an alert box to display data");
     </script> -->
     <br>
+
     <h2>JavaScript Print : using window.print()</h2>
     <h3>Click the button to print the current screen</h3>
     <!-- <button onclick="window.print()">Print this page</button> -->
     <button onclick="print()">Print this page</button>
     <br>
+
     <h1>JavaScript Statements</h1>
     <h3 id="statement"></h3>
     <script>
