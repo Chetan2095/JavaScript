@@ -153,17 +153,61 @@
     </script>
     <br>
 
+    <p id="addition_concatination"></p>
+    <script>
+        let x1 = 6 + 4 + "Volvo";
+        let x2 = "Volvo" + 6 + 4;
+        document.getElementById("addition_concatination").innerHTML = x1 + "<br>" + x2;
+    </script>
+    <br>
+
+    <h3>JavaScript Types are Dynamic:</h3>
+    <p id="dynamic"></p>
+    <script>
+        let y1;        //Value and type are undefined
+        y1 = 5;        // here y1 id 5
+        y1 = "Final Value"         //here y1 is "final value"
+        document.getElementById("dynamic").innerHTML = y1 + "<br>" + typeof y1;
+    </script>
+    <br>
+    <h3>Exponential Notation:</h3>
+    <p id="exponent"></p>
+    <script>
+        let z1 = 99e3;
+        let z2 = 11e-3;
+        document.getElementById("exponent").innerHTML = z1 + "<br>" + z2;
+    </script>
+    <br>
+
+    <h3>BigInt(x):</h3>
+    <p id="bigint"></p>
+    <script>
+        let x3 = 12345678909876543212345678890;
+        document.getElementById("bigint").innerHTML = x3 + "<br>" + BigInt(x3);
+    </script>
+    <br>
+
+    <h3>typeof </h3>
+    <p id="typeof"></p>
+    <script>
+        document.getElementById("typeof").innerHTML = typeof "" + "<br>" +
+            typeof 123 + "<br>" + typeof 12.30 + "<br>" + typeof "xxyyzz" + "<br>" + 
+            typeof (1 + 2) + "<br>" + typeof 0;
+    </script>
+    <br>
+
     <h2>Value = undefined</h2>
-    <p>A variable without a value has the value of: undefined</p>
+    <p>A variable without a 'value' has the value of-undefined and also type is undefine.</p>
     <p id="undefined"></p>
     <script>
         let carName;
-        document.getElementById("undefined").innerHTML = carName;
+        document.getElementById("undefined").innerHTML = carName + "<br>" + typeof car;
+
     </script>
     <br>
     <br>
 
-    <h2>Redeclaring Variables</h2>
+    <h2>Redeclaring Variables - let, var:</h2>
     <h3>Block Scope: Variables declared inside a { } block using 'let' and 'const' cannot be accessed from outside the
         block.</h3>
     <h3>Variables declared inside a { } block using 'var' can be accessed from outside the block.</h3>
@@ -201,7 +245,51 @@
         document.getElementById("letRedeclare").innerHTML = q;
     </script>
     <br>
+
+    <h2>const : referance is constant - new value/array/object etc.</h2>
+    <p>Declaring a constant array/object does NOT make the elements unchangeable: element of const array/object can be
+        changed but we
+        can't reassign array/object.</p>
+
+    <p id="constArray"></p>
+
+    <script>
+        // Create an Array:
+        const cars = ["Saab", "Volvo", "BMW"];
+
+        // Change an element:
+        cars[0] = "Toyota";
+
+        // Add an element:
+        cars.push("Audi");
+
+        // Display the Array:
+        document.getElementById("constArray").innerHTML = cars;
+        document.getElementById("constArray").style.color = "green"
+        document.getElementById("constArray").style.fontSize = "20px" 
+    </script>
     <br>
+
+    <p id="constObj"></p>
+
+    <script>
+        // Create an object:
+        const car = { type: "Fiat", model: "500", color: "white" };
+
+        // Change a property:
+        car.color = "red";
+
+        // Add a property:
+        car.owner = "Johnson";
+
+        // Display the property:
+        document.getElementById("constObj").innerHTML = "Car owner is " + car.owner; 
+    </script>
+
+
+
+
+
 
 </body>
 
