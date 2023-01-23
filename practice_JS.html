@@ -191,7 +191,7 @@
     <p id="typeof"></p>
     <script>
         document.getElementById("typeof").innerHTML = typeof "" + "<br>" +
-            typeof 123 + "<br>" + typeof 12.30 + "<br>" + typeof "xxyyzz" + "<br>" + 
+            typeof 123 + "<br>" + typeof 12.30 + "<br>" + typeof "xxyyzz" + "<br>" +
             typeof (1 + 2) + "<br>" + typeof 0;
     </script>
     <br>
@@ -285,6 +285,69 @@
         // Display the property:
         document.getElementById("constObj").innerHTML = "Car owner is " + car.owner; 
     </script>
+    <br>
+    <br>
+
+    <h1>Function:-</h1>
+    <h3>function is a block of code designed to perform a particular task.</h3>
+    <h3>function is executed when "something" invokes it (calls it).</h3>
+    <p id="functionDemo"></p>
+    <script>
+        function myFunction(p1, p2) {
+            return p1 * p2;
+        }
+        document.getElementById("functionDemo").innerHTML = myFunction(5, 4);
+    </script>
+    <br>
+    <h2>Function Return:</h2>
+    <p id="fnreturn"></p>
+    <script>
+        var m = myFunction(2, 7);           // function invocation/call
+        function myFunction(p1, p2) {        //function defination
+            return p1 * p2;
+        }
+        document.getElementById("fnreturn").innerHTML = m;
+    </script>
+    <br>
+
+    <h2>Why Function?</h2>
+    <h3>Define the code once, and use it many times, with different argument to produce different results.</h3>
+    <p id="useablity"></p>
+    <script>
+        function toCelsius(fahrenheit) {
+            return (5 / 9) * (fahrenheit - 32);
+        }
+        document.getElementById("useablity").innerHTML = toCelsius(77);
+    </script>
+    <br>
+
+    <h2>Functions Used as Variable Values</h2>
+    <p id="funVar"></p>
+    <script>
+        x5 = funVarValue(5, 7);
+        function funVarValue(p1, p2) {
+            return p1 * p2;
+        }
+        document.getElementById("funVar").innerHTML = x5;
+    </script>
+    <br>
+
+    <h2>Loacl variable</h2>
+    <h3>Variables declared within a JavaScript function, become LOCAL to the function. Local variables can only be
+        accessed from within the function. variables with the same name can be used in different functions.</h3>
+    <p id="localVariable1"></p>
+    <p id="localVariable2"></p>
+    <script>
+        function localvariable(){
+            let carName = "ScorpioN";
+            document.getElementById("localVariable1").innerHTML = typeof carName + " " + carName;
+         }
+         document.getElementById("localVariable2").innerHTML = carName;
+
+    </script>
+
+
+
 </body>
 
 </html>
