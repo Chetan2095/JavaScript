@@ -343,8 +343,29 @@
             document.getElementById("localVariable1").innerHTML = typeof carName + " " + carName;
          }
          document.getElementById("localVariable2").innerHTML = carName;
-
     </script>
+    <br>
+    <br>
+    <h1>JavaScript Object</h1>
+    <p id="object1"></p>
+    <p id="object2"></p>
+    <script>
+        //create an object:
+        const person = {
+            firstName : "Chetan",
+            lastName : "Anchara",
+            age : 26,
+            eyeColor : "blue",
+            fullName : function(){ return this.firstName + " " + this.lastName}     //object method
+        }
+        //access object:
+        document.getElementById("object1").innerHTML = person.firstName + " " + "is " + person["age"] + " " + "years old.";
+        //access object method:
+        document.getElementById("object2").innerHTML = person.fullName();
+    </script>
+    <br>
+    <br>
+    
 
 
 
