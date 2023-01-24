@@ -365,7 +365,26 @@
     </script>
     <br>
     <br>
-    
+    <h1>JavaScript Events</h1>
+    <p id="event1"></p>
+    <p id="event2"></p>
+    <p id="event4"></p>
+    <button onclick="document.getElementById('event1').innerHTML = 'Event Happened'">Event1</button>    
+      <!-- HTML event attributes(onclick) can execute JavaScript code directly -->
+    <br>
+    <button onmouseover="document.getElementById('event2').innerHTML = Date()">Event2</button>
+    <!-- HTML event attributes can call JavaScript functions -->
+    <br>
+    <div onmouseover="this.style.backgroundColor='red'">This is Event 3</div>
+    <br>
+    <button onclick="display()">Event4</button>
+    <!-- You can assign your own event handler functions to HTML elements -->
+    <script>
+        function display(){
+            document.getElementById("event4").innerHTML = "display fun is invoked";
+        }
+    </script>
+
 
 
 
