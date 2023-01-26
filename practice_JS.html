@@ -2,14 +2,15 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Practice JavaScript</title>
-    <link rel="stylesheet" href="practice_JS.css">
+    <link rel="stylesheet" href="practice_JS.css" />
     <script>
         function myFunction() {
-            document.getElementById('demo4').innerHTML = "Content of Paragraph is changed";
+            document.getElementById("demo4").innerHTML =
+                "Content of Paragraph is changed";
         }
     </script>
 </head>
@@ -18,93 +19,115 @@
     <h1>What can JavaScript do?</h1>
     <h2>JavaScript Can Change HTML Content</h2>
     <h3 id="demo1">JavaScript can chnage the content of HTML element.</h3>
-    <p>"finds" an HTML element (with id="demo1") use getElementById(' ') function and changes the element content
-        (innerHTML) to "Hello JavaScript":</p>
-    <button onclick="document.getElementById('demo1').innerHTML='Hello JavaScript!'">Click me!</button>
-    <br>
-    <br>
-
+    <p>
+        "finds" an HTML element (with id="demo1") use getElementById(' ') function
+        and changes the element content (innerHTML) to "Hello JavaScript":
+    </p>
+    <button onclick="document.getElementById('demo1').innerHTML='Hello JavaScript!'">
+        Click me!
+    </button>
+    <br />
+    <br />
 
     <h2>JavaScript Can Change HTML Attribute Values</h2>
-    <p>In this case JavaScript changes the value of the src="image_link" attribute of an image.</p>
-    <button onclick="document.getElementById('bulbON').src='pic_bulboff.gif'">Turn Off the light</button>
-    <img id="bulbON" src="pic_bulbon.gif" alt="Bulb ON">
+    <p>
+        In this case JavaScript changes the value of the src="image_link"
+        attribute of an image.
+    </p>
+    <button onclick="document.getElementById('bulbON').src='pic_bulboff.gif'">
+        Turn Off the light
+    </button>
+    <img id="bulbON" src="pic_bulbon.gif" alt="Bulb ON" />
     <button>Torn ON the light</button>
 
     <button>Turn Off the light</button>
-    <img id="bulbOFF" src="pic_bulboff.gif" alt="Bulb Off">
-    <button onclick="document.getElementById('bulbOFF').src='pic_bulbon.gif'">Torn ON the light</button>
-    <br>
-    <br>
-
+    <img id="bulbOFF" src="pic_bulboff.gif" alt="Bulb Off" />
+    <button onclick="document.getElementById('bulbOFF').src='pic_bulbon.gif'">
+        Torn ON the light
+    </button>
+    <br />
+    <br />
 
     <h2>JavaScript Can Change HTML Styles (CSS)</h2>
-    <p id="changeSize">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo eveniet quaerat, molestiae quia
-        blanditiis numquam
-        delectus repellendus eos ullam eligendi eaque sed ab debitis non minima cumque alias excepturi? Asperiores.</p>
-    <button onclick="document.getElementById('changeSize').style.fontSize='30px'">Click me!</button>
-    <br>
-    <br>
-
+    <p id="changeSize">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo eveniet
+        quaerat, molestiae quia blanditiis numquam delectus repellendus eos ullam
+        eligendi eaque sed ab debitis non minima cumque alias excepturi?
+        Asperiores.
+    </p>
+    <button onclick="document.getElementById('changeSize').style.fontSize='30px'">
+        Click me!
+    </button>
+    <br />
+    <br />
 
     <h2>JavaScript Can Hide HTML Elements</h2>
     <h3 id="display">Hello JavaScript!</h3>
-    <button onclick="document.getElementById('display').style.display='none'">Click Me!</button>
-    <br>
-    <br>
+    <button onclick="document.getElementById('display').style.display='none'">
+        Click Me!
+    </button>
+    <br />
+    <br />
 
-
-    <h2>JavaScript in 'script' tag in Body </h2>
+    <h2>JavaScript in 'script' tag in Body</h2>
     <p id="demo2"></p>
     <script>
-        document.getElementById('demo2').innerHTML = "My First JavaScript";
+        document.getElementById("demo2").innerHTML = "My First JavaScript";
     </script>
-    <br>
+    <br />
 
     <p id="demo3">Lorem ipsum dolor sit amet.</p>
     <button onclick="JSinBody()">Try it!</button>
     <script>
         function JSinBody() {
-            document.getElementById('demo3').innerHTML = "Content of Paragraph is changed";
+            document.getElementById("demo3").innerHTML =
+                "Content of Paragraph is changed";
         }
     </script>
-    <br>
+    <br />
 
     <h2>JavaScript in 'script' tag in Head</h2>
     <p id="demo4">Lorem ipsum dolor sit amet.</p>
     <button type="button" onclick="myFunction()">Click me!</button>
-    <br>
-    <br>
+    <br />
+    <br />
 
     <h1>External JavaScript</h1>
     <p id="demo5">Lorem ipsum dolor sit amet, consectetur.</p>
     <button onclick="externalJS()">Try it</button>
     <p>This example links to "myScript.js".</p>
     <p>(ecternalJS() function is stored in "myScript.js")</p>
-    <script src="myScript.js">
-    </script>
-    <br>
-    <br>
-    <br>
+    <script src="myScript.js"></script>
+    <br />
+    <br />
+    <br />
 
     <h1 id="underline">JavaScript output</h1>
-    <br>
+    <br />
     <h2>Using innerHTML</h2>
-    <h3 id="demo6">To access an HTML element, JavaScript can use the document.getElementById(id) method. The id
-        attribute defines the HTML element. The innerHTML property defines the HTML content:</h3>
-    <button onclick="document.getElementById('demo6').innerHTML='Hello JavaScript!'">Click me!</button>
-    <br>
+    <h3 id="demo6">
+        To access an HTML element, JavaScript can use the
+        document.getElementById(id) method. The id attribute defines the HTML
+        element. The innerHTML property defines the HTML content:
+    </h3>
+    <button onclick="document.getElementById('demo6').innerHTML='Hello JavaScript!'">
+        Click me!
+    </button>
+    <br />
 
     <h2>Using document.write()</h2>
-    <p>Never call document.write after the document has finished loading.
-        It will overwrite the whole document. This method should be used only for testing purpose.</p>
-    <br>
+    <p>
+        Never call document.write after the document has finished loading. It will
+        overwrite the whole document. This method should be used only for testing
+        purpose.
+    </p>
+    <br />
     <script>
-        document.write("five+six= ", 5 + 6)
+        document.write("five+six= ", 5 + 6);
     </script>
-    <br>
+    <br />
     <!-- <button type="button" onclick="document.write(5 + 6)">Try it</button> -->
-    <br>
+    <br />
     <h2>Using window.alert()</h2>
     <!-- <script>
         window.alert("You can use an alert box to display data");
@@ -112,13 +135,13 @@
     <!-- <script>
         alert("You can use an alert box to display data");
     </script> -->
-    <br>
+    <br />
 
     <h2>JavaScript Print : using window.print()</h2>
     <h3>Click the button to print the current screen</h3>
     <!-- <button onclick="window.print()">Print this page</button> -->
     <button onclick="print()">Print this page</button>
-    <br>
+    <br />
 
     <h1>JavaScript Statements</h1>
     <h3 id="statement"></h3>
@@ -127,7 +150,8 @@
         x = 5;
         y = 7;
         z = x + y;
-        document.getElementById('statement').innerHTML = "The value of Z = " + z + "."
+        document.getElementById("statement").innerHTML =
+            "The value of Z = " + z + ".";
     </script>
     <h2>JavaScript Code blocks</h2>
     <p id="block1"></p>
@@ -135,41 +159,43 @@
     <button onclick="codeBlock()">Click me!</button>
     <script>
         function codeBlock() {
-            document.getElementById('block1').innerHTML = "Hello Dolly";
-            document.getElementById('block2').innerHTML = "Happy Holi";
+            document.getElementById("block1").innerHTML = "Hello Dolly";
+            document.getElementById("block2").innerHTML = "Happy Holi";
         }
     </script>
-    <br>
-    <br>
+    <br />
+    <br />
     <h2>JavaScript <strong>Data Type</strong></h2>
     <p id="variable"></p>
     <script>
-        let Name = "Chetan Anchara"
-        let degree = "B.Tech"
-        let stream = "CSE"
-        const passingYear = 2018
-        document.getElementById("variable").innerHTML = Name + "<br>" + degree + stream + "<br>" + passingYear;
-        document.getElementById("variable").style.fontSize = "25px"
+        let Name = "Chetan Anchara";
+        let degree = "B.Tech";
+        let stream = "CSE";
+        const passingYear = 2018;
+        document.getElementById("variable").innerHTML =
+            Name + "<br>" + degree + stream + "<br>" + passingYear;
+        document.getElementById("variable").style.fontSize = "25px";
     </script>
-    <br>
+    <br />
 
     <p id="addition_concatination"></p>
     <script>
         let x1 = 6 + 4 + "Volvo";
         let x2 = "Volvo" + 6 + 4;
-        document.getElementById("addition_concatination").innerHTML = x1 + "<br>" + x2;
+        document.getElementById("addition_concatination").innerHTML =
+            x1 + "<br>" + x2;
     </script>
-    <br>
+    <br />
 
     <h3>JavaScript Types are Dynamic:</h3>
     <p id="dynamic"></p>
     <script>
-        let y1;        //Value and type are undefined
-        y1 = 5;        // here y1 id 5
-        y1 = "Final Value"         //here y1 is "final value"
+        let y1; //Value and type are undefined
+        y1 = 5; // here y1 id 5
+        y1 = "Final Value"; //here y1 is "final value"
         document.getElementById("dynamic").innerHTML = y1 + "<br>" + typeof y1;
     </script>
-    <br>
+    <br />
     <h3>Exponential Notation:</h3>
     <p id="exponent"></p>
     <script>
@@ -177,7 +203,7 @@
         let z2 = 11e-3;
         document.getElementById("exponent").innerHTML = z1 + "<br>" + z2;
     </script>
-    <br>
+    <br />
 
     <h3>BigInt(x):</h3>
     <p id="bigint"></p>
@@ -185,35 +211,55 @@
         let x3 = 12345678909876543212345678890;
         document.getElementById("bigint").innerHTML = x3 + "<br>" + BigInt(x3);
     </script>
-    <br>
+    <br />
 
-    <h3>typeof </h3>
+    <h3>typeof</h3>
     <p id="typeof"></p>
     <script>
-        document.getElementById("typeof").innerHTML = typeof "" + "<br>" +
-            typeof 123 + "<br>" + typeof 12.30 + "<br>" + typeof "xxyyzz" + "<br>" +
-            typeof (1 + 2) + "<br>" + typeof 0;
+        document.getElementById("typeof").innerHTML =
+            typeof "" +
+            "<br>" +
+            typeof 123 +
+            "<br>" +
+            typeof 12.3 +
+            "<br>" +
+            typeof "xxyyzz" +
+            "<br>" +
+            typeof (1 + 2) +
+            "<br>" +
+            typeof 0;
     </script>
-    <br>
+    <br />
 
     <h2>Value = undefined</h2>
-    <p>A variable without a 'value' has the value of-undefined and also type is undefine.</p>
+    <p>
+        A variable without a 'value' has the value of-undefined and also type is
+        undefine.
+    </p>
     <p id="undefined"></p>
     <script>
         let carName;
-        document.getElementById("undefined").innerHTML = carName + "<br>" + typeof car;
-
+        document.getElementById("undefined").innerHTML =
+            carName + "<br>" + typeof car;
     </script>
-    <br>
-    <br>
+    <br />
+    <br />
 
     <h2>Redeclaring Variables - let, var:</h2>
-    <h3>Block Scope: Variables declared inside a { } block using 'let' and 'const' cannot be accessed from outside the
-        block.</h3>
-    <h3>Variables declared inside a { } block using 'var' can be accessed from outside the block.</h3>
+    <h3>
+        Block Scope: Variables declared inside a { } block using 'let' and 'const'
+        cannot be accessed from outside the block.
+    </h3>
+    <h3>
+        Variables declared inside a { } block using 'var' can be accessed from
+        outside the block.
+    </h3>
 
     <h2>Redeclaring a Variable Using var</h2>
-    <p>Redeclaring a variable inside a block will also redeclare the variable outside the block</p>
+    <p>
+        Redeclaring a variable inside a block will also redeclare the variable
+        outside the block
+    </p>
     <p id="varRedeclare"></p>
     <script>
         var p = 10;
@@ -229,7 +275,10 @@
     </script>
 
     <h2>Redeclaring a Variable Using let</h2>
-    <p>Redeclaring a variable inside a block will not redeclare the variable outside the block</p>
+    <p>
+        Redeclaring a variable inside a block will not redeclare the variable
+        outside the block
+    </p>
     <p id="letRedeclare"></p>
 
     <script>
@@ -244,12 +293,14 @@
         // Here q is 10
         document.getElementById("letRedeclare").innerHTML = q;
     </script>
-    <br>
+    <br />
 
     <h2>const : referance is constant - new value/array/object etc.</h2>
-    <p>Declaring a constant array/object does NOT make the elements unchangeable: element of const array/object can be
-        changed but we
-        can't reassign array/object.</p>
+    <p>
+        Declaring a constant array/object does NOT make the elements unchangeable:
+        element of const array/object can be changed but we can't reassign
+        array/object.
+    </p>
 
     <p id="constArray"></p>
 
@@ -265,10 +316,10 @@
 
         // Display the Array:
         document.getElementById("constArray").innerHTML = cars;
-        document.getElementById("constArray").style.color = "green"
-        document.getElementById("constArray").style.fontSize = "20px" 
+        document.getElementById("constArray").style.color = "green";
+        document.getElementById("constArray").style.fontSize = "20px";
     </script>
-    <br>
+    <br />
 
     <p id="constObj"></p>
 
@@ -283,10 +334,11 @@
         car.owner = "Johnson";
 
         // Display the property:
-        document.getElementById("constObj").innerHTML = "Car owner is " + car.owner; 
+        document.getElementById("constObj").innerHTML =
+            "Car owner is " + car.owner;
     </script>
-    <br>
-    <br>
+    <br />
+    <br />
 
     <h1>Function:-</h1>
     <h3>function is a block of code designed to perform a particular task.</h3>
@@ -298,20 +350,24 @@
         }
         document.getElementById("functionDemo").innerHTML = myFunction(5, 4);
     </script>
-    <br>
+    <br />
     <h2>Function Return:</h2>
     <p id="fnreturn"></p>
     <script>
-        var m = myFunction(2, 7);           // function invocation/call
-        function myFunction(p1, p2) {        //function defination
+        var m = myFunction(2, 7); // function invocation/call
+        function myFunction(p1, p2) {
+            //function defination
             return p1 * p2;
         }
         document.getElementById("fnreturn").innerHTML = m;
     </script>
-    <br>
+    <br />
 
     <h2>Why Function?</h2>
-    <h3>Define the code once, and use it many times, with different argument to produce different results.</h3>
+    <h3>
+        Define the code once, and use it many times, with different argument to
+        produce different results.
+    </h3>
     <p id="useablity"></p>
     <script>
         function toCelsius(fahrenheit) {
@@ -319,7 +375,7 @@
         }
         document.getElementById("useablity").innerHTML = toCelsius(77);
     </script>
-    <br>
+    <br />
 
     <h2>Functions Used as Variable Values</h2>
     <p id="funVar"></p>
@@ -330,64 +386,209 @@
         }
         document.getElementById("funVar").innerHTML = x5;
     </script>
-    <br>
+    <br />
 
     <h2>Loacl variable</h2>
-    <h3>Variables declared within a JavaScript function, become LOCAL to the function. Local variables can only be
-        accessed from within the function. variables with the same name can be used in different functions.</h3>
+    <h3>
+        Variables declared within a JavaScript function, become LOCAL to the
+        function. Local variables can only be accessed from within the function.
+        variables with the same name can be used in different functions.
+    </h3>
     <p id="localVariable1"></p>
     <p id="localVariable2"></p>
     <script>
-        function localvariable(){
+        function localvariable() {
             let carName = "ScorpioN";
-            document.getElementById("localVariable1").innerHTML = typeof carName + " " + carName;
-         }
-         document.getElementById("localVariable2").innerHTML = carName;
+            document.getElementById("localVariable1").innerHTML =
+                typeof carName + " " + carName;
+        }
+        document.getElementById("localVariable2").innerHTML = carName;
     </script>
-    <br>
-    <br>
+    <br />
+    <br />
     <h1>JavaScript Object</h1>
     <p id="object1"></p>
     <p id="object2"></p>
     <script>
         //create an object:
         const person = {
-            firstName : "Chetan",
-            lastName : "Anchara",
-            age : 26,
-            eyeColor : "blue",
-            fullName : function(){ return this.firstName + " " + this.lastName}     //object method
-        }
+            firstName: "Chetan",
+            lastName: "Anchara",
+            age: 26,
+            eyeColor: "blue",
+            fullName: function () {
+                return this.firstName + " " + this.lastName;
+            }, //object method
+        };
         //access object:
-        document.getElementById("object1").innerHTML = person.firstName + " " + "is " + person["age"] + " " + "years old.";
+        document.getElementById("object1").innerHTML =
+            person.firstName + " " + "is " + person["age"] + " " + "years old.";
         //access object method:
         document.getElementById("object2").innerHTML = person.fullName();
     </script>
-    <br>
-    <br>
+    <br />
+    <br />
     <h1>JavaScript Events</h1>
     <p id="event1"></p>
     <p id="event2"></p>
     <p id="event4"></p>
-    <button onclick="document.getElementById('event1').innerHTML = 'Event Happened'">Event1</button>    
-      <!-- HTML event attributes(onclick) can execute JavaScript code directly -->
-    <br>
-    <button onmouseover="document.getElementById('event2').innerHTML = Date()">Event2</button>
+    <button onclick="document.getElementById('event1').innerHTML = 'Event Happened'">
+        Event1
+    </button>
+    <!-- HTML event attributes(onclick) can execute JavaScript code directly -->
+    <br />
+    <button onmouseover="document.getElementById('event2').innerHTML = Date()">
+        Event2
+    </button>
     <!-- HTML event attributes can call JavaScript functions -->
-    <br>
+    <br />
     <div onmouseover="this.style.backgroundColor='red'">This is Event 3</div>
-    <br>
+    <br />
     <button onclick="display()">Event4</button>
     <!-- You can assign your own event handler functions to HTML elements -->
     <script>
-        function display(){
+        function display() {
             document.getElementById("event4").innerHTML = "display fun is invoked";
         }
     </script>
+    <br />
+    <br />
 
+    <h1>Array</h1>
+    <h2>Creating an Array</h2>
+    <!-- const fruit =["Apple", "Banana", "Greeps", "Papaya"]; -->
 
+    <!-- const fruit =[
+          "Apple", 
+          "Banana", 
+          "Greeps", 
+          "Papaya"]; -->
 
+    <!-- const fruit = [];
+    fruit[0] = "Apple";
+    fruit[1] = "Banan";
+    fruit[2] = "Greeps";
+    fruit[3] = "Papaya"; -->
 
+    <h2>Changing Array Element</h2>
+    <!-- fruit[2] = "Orange"; -->
+
+    <h2>Access Array, length of array, adding elements... :</h2>
+    <p id="access1"></p>
+    <p id="access2"></p>
+    <p id="arrLenght"></p>
+    <p id="accesslast"></p>
+    <p id="arrSort"></p>
+    <script>
+        const fruit = ["Graps", "Banana", "Papaya", "Apple"];
+        fruit[2] = "Orange"; //adding another element at 2nd index
+        //adding new element:
+        fruit.push("Pinaple");
+        fruit[fruit.length] = "Pinaple";
+
+        // fruit[8] = "8thIndexElement";  //Adding elements with high indexes can create undefined "holes" in an array
+
+        document.getElementById("access1").innerHTML =
+            "element at 1st index(2nd position) is :" + fruit[1]; //Single element
+        document.getElementById("access2").innerHTML = "Full Array: " + fruit; //Full Array
+        document.getElementById("arrLenght").innerHTML =
+            "Length of array is: " + fruit.length;
+        document.getElementById("accesslast").innerHTML =
+            "Last element of array is: " + fruit[fruit.length - 1]; //last element
+        document.getElementById("arrSort").innerHTML =
+            "Sorted Array: " + fruit.sort();
+    </script>
+    <br />
+
+    <h2>Looping</h2>
+    <p id="looping"></p>
+
+    <script>
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        let Len = fruits.length;
+
+        let text = "<ul>";
+        for (let i = 0; i < Len; i++) {
+            text += "<li>" + fruits[i] + "</li>";
+        }
+        text += "</ul>";
+
+        document.getElementById("looping").innerHTML = text;
+    </script>
+    <br />
+
+    <h2>Array methods():</h2>
+    <h3>
+        toString(), join(" "), pop(), push(" "), shift(), unshift(" "), concat(),
+        splice(), slice()
+    </h3>
+    <p id="method1"></p>
+    <p id="method2"></p>
+    <p id="method3"></p>
+    <p id="method4"></p>
+    <p id="method5"></p>
+    <p id="method6"></p>
+    <p id="method7"></p>
+    <p id="method8"></p>
+    <p id="method9"></p>
+    <p id="method10"></p>
+    <p id="method11"></p>
+    <p id="method12"></p>
+    <p id="method13"></p>
+    <p id="method14"></p>
+    <p id="method15"></p>
+    <p id="method16"></p>
+    <p id="method17"></p>
+    <p id="method18"></p>
+    <p id="method19"></p>
+    <p id="method20"></p>
+    <script>
+        const arr = ["Apple", "Banana", "Orange", "Papaya", "Pineapple"];
+        const arr1 = ["Grape", "Mango"]
+        const arr2 = ["Watermelon"]
+        const str1 = "Avocados"
+
+        document.getElementById("method1").innerHTML = arr.toString();   //change array into string, saparated by ,
+        document.getElementById("method1").innerHTML = arr; // same as arr.toString() - JavaScript automatically converts an array to a comma separated string when a primitive value is expected. This is always the case when you try to output an array.
+        document.getElementById("method2").innerHTML = arr.join(" ");    // change array into string, saparated by a saparater sprcify
+        document.getElementById("method2").innerHTML = arr.pop();        // remove last element and return it
+
+        // arr.pop();
+        document.getElementById("method3").innerHTML = arr;
+
+        arr.push("Kiwi")        //pust new element at the end of array
+        // arr[arr.length] = "Kiwi";
+        document.getElementById("method4").innerHTML = arr;
+        document.getElementById("method4").innerHTML = arr.push();   //return array length
+
+        // arr.shift()                //The shift() method removes the first array element and "shifts" all other elements to a lower index.
+        document.getElementById("method5").innerHTML = arr.shift();    //The shift() method returns the value that was "shifted out":
+        document.getElementById("method6").innerHTML = arr;
+
+        arr.unshift("Strawberry");         //The unshift() method adds a new element to an array (at the beginning), and "unshifts" older elements
+        document.getElementById("method7").innerHTML = arr;
+        document.getElementById("method8").innerHTML = arr.unshift();  //The unshift() method returns the new array length
+
+        document.getElementById("method9").innerHTML = arr.concat(arr1);  //merging arrays and store result in a new array
+        document.getElementById("method10").innerHTML = arr.concat(arr1, arr2);  //it does not change the existing arrays. It always returns a new array.
+        document.getElementById("method11").innerHTML = arr.concat(arr1, arr2, str1);  //can take any number of array arguments, can also take string
+        document.getElementById("method12").innerHTML = arr;         //concat() does not change the existing arrays.
+
+        arr.splice(2, 0, "Grape", "Mango")
+        document.getElementById("method13").innerHTML = arr;
+        arr.splice(3, 2, "Watermelon")                //delete 2 element from index 3 and add new element
+        document.getElementById("method14").innerHTML = arr;
+        arr.splice(3, 2)                              // splice() can also delete multiple elements
+        document.getElementById("method15").innerHTML = arr;
+        document.getElementById("method16").innerHTML = arr.splice(3,1); //it return an array of deleted element
+        document.getElementById("method17").innerHTML = arr;
+
+        const slicedArray1 = arr.slice(2);
+        document.getElementById("method18").innerHTML = slicedArray1;
+        const slicedArray2 = arr.slice(1,3);              //selects elements from the start argument, and up to (but not including) the end argument.
+        document.getElementById("method19").innerHTML = slicedArray2;
+        document.getElementById("method20").innerHTML = arr; // slice() method does not change source array, it returns sliced element in a new array.
+    </script>
 </body>
 
 </html>
