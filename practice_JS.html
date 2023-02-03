@@ -580,15 +580,158 @@
         document.getElementById("method14").innerHTML = arr;
         arr.splice(3, 2)                              // splice() can also delete multiple elements
         document.getElementById("method15").innerHTML = arr;
-        document.getElementById("method16").innerHTML = arr.splice(3,1); //it return an array of deleted element
+        document.getElementById("method16").innerHTML = arr.splice(3, 1); //it return an array of deleted element
         document.getElementById("method17").innerHTML = arr;
 
         const slicedArray1 = arr.slice(2);
         document.getElementById("method18").innerHTML = slicedArray1;
-        const slicedArray2 = arr.slice(1,3);              //selects elements from the start argument, and up to (but not including) the end argument.
+        const slicedArray2 = arr.slice(1, 3);              //selects elements from the start argument, and up to (but not including) the end argument.
         document.getElementById("method19").innerHTML = slicedArray2;
         document.getElementById("method20").innerHTML = arr; // slice() method does not change source array, it returns sliced element in a new array.
+    </script>""
+    <br>
+
+    <h2>Sorting Array:</h2>
+    <p id="arr3"></p>
+    <p id="arrSorting1"></p>
+    <p id="arrSorting2"></p>
+    <p id="arrSorting3"></p>
+    <p id="arrSorting4"></p>
+    <p id="arrSorting5"></p>
+
+    <script>
+        const arr3 = ["Orange", "Papaya", "Apple", "Pineapple", "Grape", "Mango", "Banana", "Watermelon", "Avocados"]
+        document.getElementById("arr3").innerHTML = arr3;
+
+        document.getElementById("arrSorting1").innerHTML = "Sorted array: " + arr3.sort();   //The sort() method sorts an array alphabetically
+        document.getElementById("arrSorting2").innerHTML = "Reverced array: " + arr3.reverse();  //You can use it to sort an array in descending order.
+
+        // to sort numerical array:
+        const arr4 = [20, 100, 40, 300];
+        document.getElementById("arrSorting3").innerHTML = arr4.sort();    //Don't work - sorted alphabatically according to first number
+        const sortedArr = arr4.sort(
+            function (a, b) {
+                return a - b
+            })
+        document.getElementById("arrSorting4").innerHTML = sortedArr;  //acending order
+        document.getElementById("arrSorting5").innerHTML = arr4.sort(function (a, b) { return b - a });  //decending order
     </script>
+    <br>
+
+    <h3>Alphabalical and Numerical Sorting:</h3>
+    <p id="arrSorting6"></p>
+    <p id="arrSorting7"></p>
+    <button onclick="sortAlpha()">Sort alphabatically</button>
+    <button onclick="sortNumeric()">Sort Numerically</button>
+    <script>
+        const arr5 = [20, 100, 40, 300, 11];
+        document.getElementById("arrSorting6").innerHTML = arr5;
+
+        function sortAlpha() {
+            arr5.sort();                                      //Alphabatically Sorting
+            document.getElementById("arrSorting7").innerHTML = arr5;
+        }
+        function sortNumeric() {
+            arr5.sort(function (a, b) { return a - b });             //Compare function is used
+            document.getElementById("arrSorting7").innerHTML = arr5;
+        }
+    </script>
+    <br>
+
+    <h3>Random Sorting:</h3>
+    <p>Click the button (again and again) to sort the array in random order.</p>
+    <button onclick="rendomSort()">Rendom Sorting</button>
+    <p id="arrSorting8"></p>
+    <p id="arrSorting9"></p>
+
+    <script>
+        const arr6 = [99, 93, 15, 87, 1, 29, 100];
+        document.getElementById("arrSorting8").innerHTML = arr6;
+
+        function randomSort() {
+            arr6.sort(function () { return 0.5 - Math.random() });
+            document.getElementById("arrSorting9").innerHTML = arr6;
+        }
+    </script>
+    <br>
+
+    <h2>Min/Max : lowest/highest element value:</h2>
+    <h3>1. min/max after sorting-</h3>
+    <p id="maxMin1"></p>
+    <p id="maxMin2"></p>
+    <p id="min1"></p>
+    <p id="max1"></p>
+    <script>
+        const arr7 = [79, 15, 57, 1, 29, 100];
+        document.getElementById("maxMin1").innerHTML = arr7;
+        document.getElementById("maxMin2").innerHTML = arr7.sort(function (a, b) { return a - b });  //sorting numerically in accending order
+        document.getElementById("min1").innerHTML = "Min. value = " + arr7[0];
+        document.getElementById("max1").innerHTML = "Max. value = " + arr7[arr7.length - 1];
+    </script>
+    <br>
+    <h3>Math.min.apply(null, arr)</h3>
+    <p id="min2"></p>
+    <p id="maxMin3"></p>
+    <p id="max2"></p>
+
+    <script>
+        const arr8 = [79, 25, 47, 1, 19, 100];
+        document.getElementById("maxMin3").innerHTML = arr8;
+        document.getElementById("min2").innerHTML = "Min. value = " + myArrayMin(arr8);
+        document.getElementById("max2").innerHTML = "Max value = " + myArrayMax(arr8);
+
+        function myArrayMin1(arr) {
+            return Math.min.apply(null, arr);
+        }
+        function myArrayMax1(arr) {
+            return Math.max.apply(null, arr);
+        }
+    </script>
+    <br>
+
+    <h3>Home Made Method:</h3>
+    <p id="maxMin4"></p>
+    <p id="min4"></p>
+    <p id="max4"></p>
+    <script>
+        const arr9 = [10, 50, 100];
+        document.getElementById("maxMin4").innerHTML = "The original array = " + arr9;
+        document.getElementById("min4").innerHTML = "Min. value = " + myArrayMin1(arr9);
+        document.getElementById("max4").innerHTML = "Max value = " + myArrayMax1(arr9);
+
+        function myArrayMin1(arr){
+            let len2 = arr9.length;
+            let min = Infinity;
+            while(len2 --){
+                if(arr9[len2] < min){
+                    min = arr9[len2];
+                }
+            }
+            return min;
+        }
+
+        function myArrayMax1(arr){
+            let len3 = arr9.length;
+            let max = -Infinity;
+            while(len3 --){
+                if(arr9[len3] > max){
+                    max = arr9[len3];
+                }
+            }
+            return max;
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
 </body>
 
 </html>
